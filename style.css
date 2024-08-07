@@ -1,0 +1,60 @@
+body {
+    overflow: hidden;
+    display: flex;
+    width: calc(100vw - 70px);
+    justify-content: space-evenly;
+    writing-mode: vertical-lr;
+    outline: transparent;
+    background: powderblue;
+    filter: drop-shadow(1px 1px 2px #938bdc);
+}
+
+/* From https://maxbittker.github.io/broider/ */
+.broider {
+    border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAArRJREFUeF7tm0liwyAQBOX/Pzq55GARWTXtaZCctK/ALEUzLLYfWz5WAg+rtRjbAtQsggC9AdAvMQaaNNUeuXf7I3u7eKTOPyNVAORDtRegQCBASSJDexQ6ABkVRIBG3qRA1R7Np9uflH8lGcngQbbuBAMUCFQmlSA+t7snUBJUJRnJYBT6m0AXoKKmT+x7yudIoQF6Ps0Bal4GAfrpQLu7LI0f+dDGSvZoPJ2rd+Nn1NBuAjQ+QCdfRUlhNEE0PgqFq7Oq8OVA1WPWbMWowLrx22toNyAVAClGtdeNP0Cbr2nTz6HdGVYV9XEKpYDHXVEFaj5nt81R/NS+C6ByZCCD1N7OeLIBip/aA1SsoQEqKpqAUbtdoWrNFfO1d5cAbdsm9XfU0AB9IhCgG/6+KwqFIiEBcix51eFfX/JSfiveQytlxb7znBicKpgA5RoahZpr6HKg3SW0crkf+VLjv91r09UAJcUdBBug5hIQoAG6tiikhpp5B2iAmgmYzUWhAWomYDYXhQaomYDZ3O0U2r3KmfmgORWglF+e7/J8hwqkDlEoERLblwOVaob6vCUmP6O7ClTqX/m+RzKofks4g9jK16XRV4DypiQJKkBvCFSawQuWOLmk+Kl9Z9+hUMkhZXdBO8VP7QE6TBoBo/YAXQ1UmpE3jkmj/XdOHs9juvas+Tru8t2AAlRcMnTzCtAAfb0POZa8W4FUE1VFk73K0fGsZtv/mhigTwSiUL56kmCi0IHQ7Zf8BbfHpS6n//puaTY3cBag5kkI0KuBSrtaIVj3OZBcuv1JV+vKDicZPMjWnWCAAoHKpBJE5+tTa4VWkolC94hPmVWA0oyResgHlQSy777bq/Zev5QUI1cBBCiADdATQKSeo6EBagZarAz/s9s7Cv2fpIpZB2gRVLVbgFZJFft9A8HPMGS21s7NAAAAAElFTkSuQmCC") 28 /  28px / 0 round;
+    border-width: 28px;
+    border-style: solid;
+}
+
+
+.sliders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+}
+
+.outfitDisplay {
+    display: flex;
+    width: 100%;
+}
+
+
+.sliderContainer {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[type="range"] {
+    height: 100%;
+    direction: rtl;
+}
+
+.outfitDisplayContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    clip-path: inset(0px round 15px);
+}
+
+
+input[type=color] {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+}
+
+input[type=color]::-webkit-color-swatch {
+    border-color: transparent;
+}

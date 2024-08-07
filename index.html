@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- js -->
+    <script>
+        function setOutfitDisplaySize(id, value) {
+            let outfitDisplay = document.getElementById(id);
+            outfitDisplay.style.height = (value) + "%";
+        }
+    </script>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Palette</title>
+</head>
+<body class="broider">
+<div class="sliders">
+    <div class="sliderContainer">
+        <input id="headSlider" max="100" oninput="setOutfitDisplaySize('head',this.value)"
+               style="transform: rotate(180deg)"
+               type="range"
+               value="25"/>
+    </div>
+
+    <div class="outfitDisplayContainer" style="display:flex">
+        <input class="outfitDisplay" id="head"
+               oninput="this.style.setProperty('background-color', this.value)"
+               style="background-color: black;
+               flex-shrink: 0;
+               height: 25%;
+               "
+               type=color
+               value="#000000">
+        <input class="outfitDisplay" id="torso"
+               oninput="this.style.setProperty('background-color', this.value)"
+               style="
+               background-color: red;
+               height: 0%;
+               flex-grow: 1;"
+               type="color"
+               value="#ff0000"
+        />
+        <input class="outfitDisplay" id="legs"
+               oninput="this.style.setProperty('background-color', this.value)"
+               style="background-color: green;
+               height: 25%;
+               flex-shrink: 1;
+               "
+               type="color"
+               value="#008000"/>
+    </div>
+    <div class="sliderContainer">
+
+        <input id="legsSlider" max="100" oninput="setOutfitDisplaySize('legs',this.value)"
+               type="range"
+               value="25"/>
+    </div>
+</div>
+</body>
+</html>
