@@ -45,7 +45,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 30vw;
-    clip-path: inset(0px round 15px);
+    clip-path: inset(0px round .5vw);
 }
 
 
